@@ -13,6 +13,7 @@
 		2C3D4A3D1B20538F00B6FC0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3D4A3C1B20538F00B6FC0F /* Images.xcassets */; };
 		2C3D4A401B20538F00B6FC0F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3D4A3E1B20538F00B6FC0F /* LaunchScreen.xib */; };
 		2C3D4A4C1B20538F00B6FC0F /* MenuControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3D4A4B1B20538F00B6FC0F /* MenuControllerTests.swift */; };
+		2C3D4A561B213B7F00B6FC0F /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3D4A551B213B7F00B6FC0F /* CustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		2C3D4A451B20538F00B6FC0F /* MenuControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MenuControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3D4A4A1B20538F00B6FC0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C3D4A4B1B20538F00B6FC0F /* MenuControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuControllerTests.swift; sourceTree = "<group>"; };
+		2C3D4A551B213B7F00B6FC0F /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				2C3D4A351B20538F00B6FC0F /* AppDelegate.swift */,
+				2C3D4A551B213B7F00B6FC0F /* CustomView.swift */,
 				2C3D4A371B20538F00B6FC0F /* ViewController.swift */,
 				2C3D4A391B20538F00B6FC0F /* Main.storyboard */,
 				2C3D4A3C1B20538F00B6FC0F /* Images.xcassets */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C3D4A561B213B7F00B6FC0F /* CustomView.swift in Sources */,
 				2C3D4A381B20538F00B6FC0F /* ViewController.swift in Sources */,
 				2C3D4A361B20538F00B6FC0F /* AppDelegate.swift in Sources */,
 			);
@@ -411,6 +415,7 @@
 				2C3D4A511B20538F00B6FC0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C3D4A521B20538F00B6FC0F /* Build configuration list for PBXNativeTarget "MenuControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				2C3D4A541B20538F00B6FC0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

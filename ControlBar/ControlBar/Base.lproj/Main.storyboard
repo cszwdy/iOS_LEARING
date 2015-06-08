@@ -7,7 +7,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MenuController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ControlBar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,29 +16,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3J8-u2-bk0" customClass="CustomView" customModule="MenuController" customModuleProvider="target">
-                                <rect key="frame" x="16" y="170" width="568" height="208"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <gestureRecognizers/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtB-0M-qt1">
+                                <rect key="frame" x="277" y="434" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="znA-es-a6f" appends="YES" id="V67-JA-0se"/>
+                                    <action selector="changeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bRc-31-c2r"/>
                                 </connections>
-                            </view>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="3J8-u2-bk0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-26" id="2BI-G9-aDp"/>
-                            <constraint firstItem="3J8-u2-bk0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="QUr-3m-hC0"/>
-                            <constraint firstItem="3J8-u2-bk0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rAn-SE-WMd"/>
-                            <constraint firstItem="3J8-u2-bk0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="tMM-oi-Y33"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mtB-0M-qt1" secondAttribute="bottom" constant="136" id="eTV-lD-daf"/>
+                            <constraint firstItem="mtB-0M-qt1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mVz-vj-lzY"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Epf-3W-5B5" appends="YES" id="QHF-cu-DvW"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="znA-es-a6f">
+                <tapGestureRecognizer id="Epf-3W-5B5">
                     <connections>
-                        <action selector="tapAction:" destination="BYZ-38-t0r" id="QpF-Vx-9tF"/>
+                        <action selector="tapAction:" destination="BYZ-38-t0r" id="o81-QK-Uub"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="0bO-qL-rXv"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

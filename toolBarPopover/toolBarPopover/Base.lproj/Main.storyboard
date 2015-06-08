@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="S2z-gM-gX6">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Dhb-MU-OUH">
+            <objects>
+                <navigationController id="S2z-gM-gX6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K6x-P1-wxM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NtE-rY-Fxw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="phl-TI-XJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-232" y="142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="toolBarPopover" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enw-ob-krj">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <subviews>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bhX-LP-A0y">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <items>
+                                            <barButtonItem title="Item" id="IUj-xQ-4IR"/>
+                                        </items>
+                                    </toolbar>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" tag="10" contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfI-qH-qSN">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <items>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="hJq-Bg-eN2"/>
+                                            <barButtonItem title="特效" id="Xxd-Gv-JdO"/>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="PEc-78-37p"/>
+                                            <barButtonItem title="动画" id="52D-Fz-8fb"/>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="5Cu-ba-XYN"/>
+                                            <barButtonItem title="滤镜" id="cgg-7b-DU0"/>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="cBv-Iu-q6w"/>
+                                        </items>
+                                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </toolbar>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="EfI-qH-qSN" secondAttribute="bottom" id="0rt-l9-bIt"/>
+                                    <constraint firstItem="EfI-qH-qSN" firstAttribute="leading" secondItem="enw-ob-krj" secondAttribute="leading" id="5Jw-T5-UjG"/>
+                                    <constraint firstAttribute="trailing" secondItem="EfI-qH-qSN" secondAttribute="trailing" id="LSc-Lj-TWq"/>
+                                    <constraint firstItem="EfI-qH-qSN" firstAttribute="top" secondItem="enw-ob-krj" secondAttribute="top" id="kH2-jG-ewN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="enw-ob-krj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2jS-L3-NfS"/>
+                            <constraint firstAttribute="trailing" secondItem="enw-ob-krj" secondAttribute="trailing" id="ex8-CY-3bH"/>
+                            <constraint firstItem="enw-ob-krj" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="trx-Y6-zao"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Pcc-gg-CTG" appends="YES" id="tzt-fW-HN2"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="j4B-8V-YgG">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="VbC-pp-cDi"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barView" destination="enw-ob-krj" id="1yJ-Ad-sdY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Pcc-gg-CTG">
+                    <connections>
+                        <action selector="tapAction:" destination="BYZ-38-t0r" id="8Tq-Zl-4Z4"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="518" y="142"/>
+        </scene>
+    </scenes>
+</document>

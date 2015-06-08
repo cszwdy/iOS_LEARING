@@ -14,38 +14,29 @@ let menu = UIMenuController.sharedMenuController()
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeView:", name: "ChangeView", object: nil)
     }
     
     @IBAction func tapAction(sender: UITapGestureRecognizer) {
         
-        view.becomeFirstResponder()
+        sender.view!.becomeFirstResponder()
         
         let menuItems = [UIMenuItem(title: "Edit", action: "Edit:"), UIMenuItem(title: "Remove", action: "Remove:")]
         menu.menuItems = menuItems
         menu.setTargetRect(sender.view!.frame, inView: view)
         menu.setMenuVisible(true, animated: true)
-        
-    }
-    
-    override func canPerformAction(action: Selector, withSender sender: AnyObject?) -> Bool {
-        
-        return (action == Selector("Edit:"))
-    }
-    
-    func Edit(sender: UIMenuItem) {
-        
     }
     
     func Remove(sender: UIMenuItem) {
         
     }
     
-    // http://stackoverflow.com/questions/3112925/uimenucontroller-not-showing-up
-    
-    override func canBecomeFirstResponder() -> Bool {
+    func changeView(noti: NSNotification) {
         
-        return true
+        if let obj = noti.object as? CustomView {
+            
+            obj.bounds.size.width -= 100.0
+        }
     }
-    
 }
 
