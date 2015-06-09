@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>70CA1E9A-17FE-4C63-BA3F-C9823327C232</string>
+	<string>B6AC034D-BB76-40DC-A6BF-ECAB3CC0F803</string>
 	<key>IDESourceControlProjectName</key>
-	<string>ControlBar</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9E150E53CC0979C9F7384F17D484C50E5BADD767</key>
 		<string>https://github.com/cszwdy/iOS_LEARING.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ControlBar/ControlBar.xcodeproj</string>
+	<string>ModelObserver/ModelObserver.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9E150E53CC0979C9F7384F17D484C50E5BADD767</key>
