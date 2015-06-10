@@ -8,16 +8,18 @@
 
 import UIKit
 
-func ==(lhs: Listener, rhs: Listener) -> Bool {
+func ==<T>(lhs: Listener<T>, rhs: Listener<T>) -> Bool {
     return lhs.name == rhs.name
 }
 
-struct Listener: Hashable {
+
+struct Listener<T>: Hashable {
     
     let name: String
     
-    typealias Action = String -> Void
+    typealias Action = T -> Void
     let action: Action
+
     
     var hashValue: Int {
         return name.hashValue
@@ -26,26 +28,47 @@ struct Listener: Hashable {
 
 class Dynamic<T> {
 
-    var listenerSet = Set<Listener>()
+   private var listenerSet = Set<Listener<T>>()
+ 
+    func bind(ID: String, action: Listener<T>.Action) -> Bool {
+        let listener = Listener(name: ID, action: action)
+        if listenerSet.contains(listener) {
+//            assert(false, "The listener ID is repeat")
+            return false
+        } else {
+            listenerSet.insert(listener)
+            return true
+        }
+        
+    }
+
+    func bindAndFire(ID: String, action: Listener<T>.Action) {
+        if bind(ID, action: action) {
+            action(value)
+        }
+    }
     
-//    var listener: Listener?
-//    
-//    func bind(listener: Listener?) {
-//        self.listener = listener
-//    }
-//    
-//    func bindAndFire(listener: Listener?) {
-//        self.listener = listener
-//        if let listener = listener {
-//            listener(value)
-//        }
-//    }
+    func removeActionWithID(ID: String) -> Bool {
+        
+        for alistener in listenerSet {
+            if alistener.name == ID {
+                listenerSet.remove(alistener)
+                return true
+            }
+        }
+        
+        return false
+    }
+    
+    deinit {
+        listenerSet.removeAll(keepCapacity: false)
+    }
     
     var value: T {
         didSet {
             
             for aListener in listenerSet {
-                
+                aListener.action(value)
             }
         }
     }
@@ -55,9 +78,24 @@ class Dynamic<T> {
     }
 }
 
-class Model: NSObject {
+class Model {
    
-    var name = "Emiaostein"
-    var title = 123
-
+    var name = "Emiaostein" {
+        didSet {
+            nameListener.value = name
+        }
+    }
+    var title = 123 {
+        didSet {
+            titleListener.value = title
+        }
+    }
+    
+    var nameListener: Dynamic<String>!
+    var titleListener: Dynamic<Int>!
+    
+    init() {
+        nameListener = Dynamic(name)
+        titleListener = Dynamic(title)
+    }
 }
