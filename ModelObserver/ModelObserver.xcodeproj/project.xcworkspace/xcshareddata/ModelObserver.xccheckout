@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>B6AC034D-BB76-40DC-A6BF-ECAB3CC0F803</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>ModelObserver</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9E150E53CC0979C9F7384F17D484C50E5BADD767</key>
 		<string>https://github.com/cszwdy/iOS_LEARING.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ModelObserver/ModelObserver.xcodeproj/project.xcworkspace</string>
+	<string>ModelObserver/ModelObserver.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9E150E53CC0979C9F7384F17D484C50E5BADD767</key>

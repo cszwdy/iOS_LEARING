@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ModelObserver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,114 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ivW-2W-Cps">
+                                <rect key="frame" x="0.0" y="20" width="600" height="126"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="126" id="kGg-tM-tOS"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jgF-2z-WdQ"/>
+                                </connections>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFh-Fy-vaA">
+                                <rect key="frame" x="0.0" y="237" width="600" height="126"/>
+                                <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JdD-j0-4zp"/>
+                                </connections>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSO-JY-oHa">
+                                <rect key="frame" x="0.0" y="474" width="600" height="126"/>
+                                <color key="backgroundColor" red="0.50196081399917603" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="126" id="JwM-zw-a5z"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="PBA-xW-3Xm"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFH-EV-tMP">
+                                <rect key="frame" x="521" y="180" width="63" height="30"/>
+                                <state key="normal" title="Add Blue">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addBlueAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gnn-Ou-EHf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7X-1f-FAv">
+                                <rect key="frame" x="16" y="415" width="99" height="30"/>
+                                <state key="normal" title="Delete Orange">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteOrangeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qra-2b-WKx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqY-Du-OVZ">
+                                <rect key="frame" x="501" y="415" width="83" height="30"/>
+                                <state key="normal" title="Add Orange">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addOrangeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U1B-JX-IZS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMb-PI-oFh">
+                                <rect key="frame" x="16" y="180" width="79" height="30"/>
+                                <state key="normal" title="Delete Blue">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deBlueAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V4W-Hf-HsY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="dFH-EV-tMP" secondAttribute="trailing" id="7tP-b8-tcN"/>
+                            <constraint firstItem="X7X-1f-FAv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ArT-qS-MYO"/>
+                            <constraint firstItem="fFh-Fy-vaA" firstAttribute="trailing" secondItem="ivW-2W-Cps" secondAttribute="trailing" id="Bvu-V4-x3r"/>
+                            <constraint firstItem="fFh-Fy-vaA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="E1v-Es-hdn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LqY-Du-OVZ" secondAttribute="trailing" id="H6S-JC-C97"/>
+                            <constraint firstItem="X7X-1f-FAv" firstAttribute="top" secondItem="fFh-Fy-vaA" secondAttribute="bottom" constant="52" id="HFe-Qe-ubk"/>
+                            <constraint firstItem="ZSO-JY-oHa" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="JfF-1O-eG7"/>
+                            <constraint firstItem="fFh-Fy-vaA" firstAttribute="top" secondItem="ivW-2W-Cps" secondAttribute="bottom" constant="91" id="Kx9-Rs-9Lz"/>
+                            <constraint firstItem="YMb-PI-oFh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="V7x-vc-gn4"/>
+                            <constraint firstItem="ZSO-JY-oHa" firstAttribute="leading" secondItem="fFh-Fy-vaA" secondAttribute="leading" id="XQ1-Ze-gnC"/>
+                            <constraint firstItem="fFh-Fy-vaA" firstAttribute="leading" secondItem="ivW-2W-Cps" secondAttribute="leading" id="Xqk-bB-STh"/>
+                            <constraint firstItem="ZSO-JY-oHa" firstAttribute="trailing" secondItem="fFh-Fy-vaA" secondAttribute="trailing" id="blY-FL-9zi"/>
+                            <constraint firstItem="YMb-PI-oFh" firstAttribute="top" secondItem="ivW-2W-Cps" secondAttribute="bottom" constant="34" id="byU-aW-au0"/>
+                            <constraint firstItem="ivW-2W-Cps" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eo0-6v-3IG"/>
+                            <constraint firstItem="dFH-EV-tMP" firstAttribute="top" secondItem="ivW-2W-Cps" secondAttribute="bottom" constant="34" id="gJ1-CK-6UE"/>
+                            <constraint firstItem="ivW-2W-Cps" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="i0H-zu-E7u"/>
+                            <constraint firstItem="LqY-Du-OVZ" firstAttribute="top" secondItem="fFh-Fy-vaA" secondAttribute="bottom" constant="52" id="inx-CW-fUv"/>
+                            <constraint firstAttribute="trailing" secondItem="ivW-2W-Cps" secondAttribute="trailing" id="mTN-ZN-lFr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueTextView" destination="ivW-2W-Cps" id="mtM-5F-1fV"/>
+                        <outlet property="orangeTextView" destination="fFh-Fy-vaA" id="giI-tL-7bc"/>
+                        <outlet property="purpleTextView" destination="ZSO-JY-oHa" id="B83-h9-Wug"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="370" y="378"/>
         </scene>
     </scenes>
 </document>

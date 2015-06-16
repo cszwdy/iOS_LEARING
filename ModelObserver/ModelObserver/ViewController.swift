@@ -8,18 +8,49 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextViewDelegate {
 
+    @IBOutlet weak var blueTextView: UITextView!
+    @IBOutlet weak var orangeTextView: UITextView!
+    @IBOutlet weak var purpleTextView: UITextView!
+    let model = Model()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "textChagned:", name: UITextFieldTextDidBeginEditingNotification, object: nil)
+
+        model.nameListener.bindAndFire("Purple", action: {[unowned self] name -> Void in
+            
+            self.purpleTextView.text = name
+        })
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func textViewDidChange(textView: UITextView) {
+        
+        model.name = textView.text
     }
-
-
+    
+    @IBAction func deBlueAction(sender: UIButton) {
+        model.nameListener.removeActionWithID("Blue")
+    }
+    
+    @IBAction func addBlueAction(sender: UIButton) {
+        model.nameListener.bindAndFire("Blue", action: {[unowned self] name -> Void in
+            
+            self.blueTextView.text = name
+            })
+    }
+    
+    @IBAction func deleteOrangeAction(sender: UIButton) {
+        model.nameListener.removeActionWithID("Orange")
+    }
+    
+    @IBAction func addOrangeAction(sender: UIButton) {
+        model.nameListener.bindAndFire("Orange", action: {[unowned self] name -> Void in
+            
+            self.orangeTextView.text = name
+            })
+    }
+    
 }
 
