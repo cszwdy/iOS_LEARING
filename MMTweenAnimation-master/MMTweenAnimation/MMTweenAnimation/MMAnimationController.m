@@ -84,6 +84,7 @@
     CGFloat scaleEnd = 3.0;
     CGFloat alphaBegain = 1.0;
     CGFloat alphaEnd = 0.0;
+    self.anim = [[MMTweenAnimation alloc] init];
     self.anim = [MMTweenAnimation animation];
     self.anim.functionType   = self.functionType;
     self.anim.easingType     = self.easingType;

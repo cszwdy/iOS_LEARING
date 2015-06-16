@@ -16,6 +16,16 @@
 
 @implementation MMTweenAnimation
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+        
+    }
+    return self;
+}
+
 + (instancetype)animation
 {
     MMTweenAnimation *tweaner = [super animationWithBlock:^BOOL(id target, POPCustomAnimation *animation) {

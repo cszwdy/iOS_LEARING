@@ -1,0 +1,6 @@
+framework module MMTweenAnimation {
+  umbrella header "Pods-PopAnimationDemo-MMTweenAnimation-umbrella.h"
+
+  export *
+  module * { export * }
+}

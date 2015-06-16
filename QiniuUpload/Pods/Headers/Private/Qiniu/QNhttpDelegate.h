@@ -1,0 +1,1 @@
+../../../Qiniu/QiniuSDK/Http/QNhttpDelegate.h

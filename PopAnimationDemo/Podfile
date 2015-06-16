@@ -4,6 +4,7 @@ use_frameworks!
 
 target 'PopAnimationDemo' do
 pod 'pop', '~> 1.0.7'
+pod 'MMTweenAnimation', :head
 end
 
 target 'PopAnimationDemoTests' do
