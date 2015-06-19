@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		2004AEB3FEC5996DA41B5B47 /* Pods_QiniuUpload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDBE728C482ADD7060EDBDD /* Pods_QiniuUpload.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		2C3B98BB1B296DDF009384F8 /* SDF.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3B98BA1B296DDF009384F8 /* SDF.png */; };
+		2C1DF5551B341109005AD2F7 /* UploadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DF5541B341109005AD2F7 /* UploadOperation.swift */; };
+		2C1DF5571B341B08005AD2F7 /* uploadQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DF5561B341B08005AD2F7 /* uploadQueue.swift */; };
 		2C6162921B293B44005B9EA4 /* Qiniu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6162911B293B44005B9EA4 /* Qiniu.framework */; };
-		2C6162941B29425A005B9EA4 /* qiniuUploadTest in Resources */ = {isa = PBXBuildFile; fileRef = 2C6162931B29425A005B9EA4 /* qiniuUploadTest */; };
-		2C6162961B2943BE005B9EA4 /* iOS9.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C6162951B2943BE005B9EA4 /* iOS9.png */; };
 		2CA19C5E1B2939EF00534D8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA19C5D1B2939EF00534D8C /* AppDelegate.swift */; };
 		2CA19C601B2939EF00534D8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA19C5F1B2939EF00534D8C /* ViewController.swift */; };
 		2CA19C631B2939F000534D8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA19C611B2939F000534D8C /* Main.storyboard */; };
 		2CA19C651B2939F000534D8C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA19C641B2939F000534D8C /* Images.xcassets */; };
 		2CA19C681B2939F000534D8C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CA19C661B2939F000534D8C /* LaunchScreen.xib */; };
 		2CA19C741B2939F000534D8C /* QiniuUploadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA19C731B2939F000534D8C /* QiniuUploadTests.swift */; };
+		2CF293D71B33E12B00539F76 /* main in Resources */ = {isa = PBXBuildFile; fileRef = 2CF293D61B33E12B00539F76 /* main */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,10 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2C3B98BA1B296DDF009384F8 /* SDF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SDF.png; sourceTree = "<group>"; };
+		2C1DF5541B341109005AD2F7 /* UploadOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadOperation.swift; sourceTree = "<group>"; };
+		2C1DF5561B341B08005AD2F7 /* uploadQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uploadQueue.swift; sourceTree = "<group>"; };
 		2C6162911B293B44005B9EA4 /* Qiniu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Qiniu.framework; path = "Pods/../build/Debug-iphoneos/Pods-QiniuUpload/Qiniu.framework"; sourceTree = "<group>"; };
-		2C6162931B29425A005B9EA4 /* qiniuUploadTest */ = {isa = PBXFileReference; lastKnownFileType = folder; path = qiniuUploadTest; sourceTree = "<group>"; };
-		2C6162951B2943BE005B9EA4 /* iOS9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iOS9.png; path = qiniuUploadTest/iOS9.png; sourceTree = "<group>"; };
 		2CA19C581B2939EF00534D8C /* QiniuUpload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiniuUpload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA19C5C1B2939EF00534D8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CA19C5D1B2939EF00534D8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +44,7 @@
 		2CA19C6D1B2939F000534D8C /* QiniuUploadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiniuUploadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA19C721B2939F000534D8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CA19C731B2939F000534D8C /* QiniuUploadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiniuUploadTests.swift; sourceTree = "<group>"; };
+		2CF293D61B33E12B00539F76 /* main */ = {isa = PBXFileReference; lastKnownFileType = folder; path = main; sourceTree = "<group>"; };
 		7E8FD46F87E38E6CD8DD4DF6 /* Pods-QiniuUpload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiniuUpload.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QiniuUpload/Pods-QiniuUpload.debug.xcconfig"; sourceTree = "<group>"; };
 		BB34826A4ADDED8BF239738B /* Pods-QiniuUpload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiniuUpload.release.xcconfig"; path = "Pods/Target Support Files/Pods-QiniuUpload/Pods-QiniuUpload.release.xcconfig"; sourceTree = "<group>"; };
 		CDDBE728C482ADD7060EDBDD /* Pods_QiniuUpload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QiniuUpload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,10 +93,10 @@
 		2CA19C5A1B2939EF00534D8C /* QiniuUpload */ = {
 			isa = PBXGroup;
 			children = (
-				2C3B98BA1B296DDF009384F8 /* SDF.png */,
-				2C6162951B2943BE005B9EA4 /* iOS9.png */,
-				2C6162931B29425A005B9EA4 /* qiniuUploadTest */,
+				2CF293D61B33E12B00539F76 /* main */,
 				2CA19C5D1B2939EF00534D8C /* AppDelegate.swift */,
+				2C1DF5561B341B08005AD2F7 /* uploadQueue.swift */,
+				2C1DF5541B341109005AD2F7 /* UploadOperation.swift */,
 				2CA19C5F1B2939EF00534D8C /* ViewController.swift */,
 				2CA19C611B2939F000534D8C /* Main.storyboard */,
 				2CA19C641B2939F000534D8C /* Images.xcassets */,
@@ -233,10 +233,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CA19C631B2939F000534D8C /* Main.storyboard in Resources */,
-				2C6162961B2943BE005B9EA4 /* iOS9.png in Resources */,
+				2CF293D71B33E12B00539F76 /* main in Resources */,
 				2CA19C681B2939F000534D8C /* LaunchScreen.xib in Resources */,
-				2C3B98BB1B296DDF009384F8 /* SDF.png in Resources */,
-				2C6162941B29425A005B9EA4 /* qiniuUploadTest in Resources */,
 				2CA19C651B2939F000534D8C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +302,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CA19C601B2939EF00534D8C /* ViewController.swift in Sources */,
+				2C1DF5551B341109005AD2F7 /* UploadOperation.swift in Sources */,
+				2C1DF5571B341B08005AD2F7 /* uploadQueue.swift in Sources */,
 				2CA19C5E1B2939EF00534D8C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

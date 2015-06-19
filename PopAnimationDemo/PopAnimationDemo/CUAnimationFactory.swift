@@ -85,7 +85,9 @@ class CUAnimationFactory: NSObject {
         
         aAnimation.completionBlock = {[unowned self] (animatoin, completed) -> Void in
             
-             let com = self.completeBlock(completed)
+            if let com = self.completeBlock {
+                com(completed)
+            }
         }
         
         self.pop_addAnimation(aAnimation, forKey: "Preview")
