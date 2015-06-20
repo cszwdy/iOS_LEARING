@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A178w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="blurView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Joe-e3-aVo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ao" translatesAutoresizingMaskIntoConstraints="NO" id="Dp3-xz-Z9g">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <animations/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="15" y="22" width="259" height="380"/>
+                                        </variation>
+                                    </imageView>
+                                    <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YSU-9v-FoW">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bjB-pt-MYg">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qC2-rY-ec4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mUu-8U-gy6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <animations/>
+                                                    </view>
+                                                    <animations/>
+                                                    <blurEffect style="light"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="296" height="432"/>
+                                                    </variation>
+                                                </visualEffectView>
+                                            </subviews>
+                                            <animations/>
+                                        </view>
+                                        <animations/>
+                                        <blurEffect style="light"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="-6" y="-8" width="296" height="432"/>
+                                        </variation>
+                                    </visualEffectView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="380" id="dTY-AX-rmy">
+                                        <variation key="widthClass=compact" constant="424"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="260" id="kME-a5-gyr">
+                                        <variation key="widthClass=compact" constant="290"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" secondItem="Joe-e3-aVo" secondAttribute="height" multiplier="13:19" id="lWJ-RH-8ke"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="Dp3-xz-Z9g"/>
+                                        <exclude reference="YSU-9v-FoW"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="dTY-AX-rmy"/>
+                                        <exclude reference="kME-a5-gyr"/>
+                                        <exclude reference="lWJ-RH-8ke"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="55" y="88" width="290" height="424"/>
+                                    <mask key="subviews">
+                                        <include reference="Dp3-xz-Z9g"/>
+                                        <include reference="YSU-9v-FoW"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="dTY-AX-rmy"/>
+                                        <include reference="kME-a5-gyr"/>
+                                        <include reference="lWJ-RH-8ke"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Joe-e3-aVo" secondAttribute="centerX" id="9Iu-cg-LGa">
+                                <variation key="widthClass=compact" constant="-115"/>
+                            </constraint>
+                            <constraint firstAttribute="centerY" secondItem="Joe-e3-aVo" secondAttribute="centerY" id="KCg-kk-x0I">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Joe-e3-aVo"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="9Iu-cg-LGa"/>
+                                <exclude reference="KCg-kk-x0I"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Joe-e3-aVo"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="9Iu-cg-LGa"/>
+                                <include reference="KCg-kk-x0I"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Uc3-jl-Zof" appends="YES" id="vw2-OG-c72"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="aView" destination="Joe-e3-aVo" id="Jgo-UE-q8A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Uc3-jl-Zof">
+                    <connections>
+                        <action selector="panAction:" destination="BYZ-38-t0r" id="Dva-wM-Ipr"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="339" y="444"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ao" width="259" height="380"/>
+    </resources>
+</document>

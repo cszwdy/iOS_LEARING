@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>053AC73B-5EC9-40A7-B527-9984F011C9C7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9E150E53CC0979C9F7384F17D484C50E5BADD767</key>
+		<string>https://github.com/cszwdy/iOS_LEARING.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>QiniuUpload/QiniuUpload.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9E150E53CC0979C9F7384F17D484C50E5BADD767</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/cszwdy/iOS_LEARING.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9E150E53CC0979C9F7384F17D484C50E5BADD767</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9E150E53CC0979C9F7384F17D484C50E5BADD767</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS_LEARING</string>
+		</dict>
+	</array>
+</dict>
+</plist>
