@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="15A178w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Blur" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="VLe-Uj-HQg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jMs-62-og4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mLN-um-TwV">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="trW-8B-qls">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="o3C-jH-IKI">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <animations/>
+                                            </view>
+                                            <animations/>
+                                            <vibrancyEffect>
+                                                <blurEffect style="light"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                    <animations/>
+                                </view>
+                                <animations/>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdo-IF-NzL">
+                                <rect key="frame" x="69" y="0.0" width="463" height="600"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="b.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="8bx-Bv-dmq">
+                                        <rect key="frame" x="-28" y="127" width="491" height="346"/>
+                                        <animations/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKP-0k-Ptj">
+                                        <rect key="frame" x="-70" y="0.0" width="533" height="600"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FSp-re-1cZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="533" height="600"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wHv-o2-Csh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="602" height="600"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="Xjs-Yl-v5a">
+                                                        <rect key="frame" x="0.0" y="0.0" width="602" height="600"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <animations/>
+                                                    </view>
+                                                    <animations/>
+                                                    <vibrancyEffect>
+                                                        <blurEffect style="light"/>
+                                                    </vibrancyEffect>
+                                                </visualEffectView>
+                                            </subviews>
+                                            <animations/>
+                                        </view>
+                                        <animations/>
+                                        <blurEffect style="light"/>
+                                    </visualEffectView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="8bx-Bv-dmq" firstAttribute="centerY" secondItem="gdo-IF-NzL" secondAttribute="centerY" id="DQq-0Q-0Uz"/>
+                                    <constraint firstItem="cKP-0k-Ptj" firstAttribute="leading" secondItem="gdo-IF-NzL" secondAttribute="leading" constant="-70" id="DdI-BQ-Jle"/>
+                                    <constraint firstItem="cKP-0k-Ptj" firstAttribute="centerY" secondItem="8bx-Bv-dmq" secondAttribute="centerY" id="DrQ-Mo-Ttw"/>
+                                    <constraint firstItem="8bx-Bv-dmq" firstAttribute="top" secondItem="gdo-IF-NzL" secondAttribute="top" constant="127" id="OFU-KX-pzR"/>
+                                    <constraint firstItem="8bx-Bv-dmq" firstAttribute="centerX" secondItem="gdo-IF-NzL" secondAttribute="centerX" constant="-14" id="bmC-W6-wqq"/>
+                                    <constraint firstItem="cKP-0k-Ptj" firstAttribute="centerX" secondItem="8bx-Bv-dmq" secondAttribute="centerX" constant="-21" id="fBg-22-VEM"/>
+                                    <constraint firstItem="cKP-0k-Ptj" firstAttribute="top" secondItem="gdo-IF-NzL" secondAttribute="top" id="hDm-o1-9tF"/>
+                                    <constraint firstItem="8bx-Bv-dmq" firstAttribute="leading" secondItem="gdo-IF-NzL" secondAttribute="leading" constant="-28" id="oMc-bf-p5n"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="CKL-Ab-tEK">
+                                <rect key="frame" x="540" y="56" width="451" height="481"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="451" id="UoJ-ug-NAV"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="jMs-62-og4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="57Q-jk-GgN"/>
+                            <constraint firstItem="jMs-62-og4" firstAttribute="bottom" secondItem="VLe-Uj-HQg" secondAttribute="bottom" id="7iR-9I-ZNj"/>
+                            <constraint firstItem="jMs-62-og4" firstAttribute="top" secondItem="VLe-Uj-HQg" secondAttribute="top" id="8Ct-yg-moB"/>
+                            <constraint firstItem="jMs-62-og4" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="UG0-NX-vUT"/>
+                            <constraint firstItem="gdo-IF-NzL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vac-vb-T7z"/>
+                            <constraint firstAttribute="trailing" secondItem="gdo-IF-NzL" secondAttribute="trailing" constant="68" id="c8l-j4-CGi"/>
+                            <constraint firstAttribute="trailing" secondItem="CKL-Ab-tEK" secondAttribute="trailing" constant="-391" id="d35-TY-yKc"/>
+                            <constraint firstItem="jMs-62-og4" firstAttribute="centerX" secondItem="gdo-IF-NzL" secondAttribute="centerX" id="ioT-es-vRJ"/>
+                            <constraint firstItem="gdo-IF-NzL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="jFS-lg-8vF"/>
+                            <constraint firstItem="CKL-Ab-tEK" firstAttribute="top" secondItem="gdo-IF-NzL" secondAttribute="top" constant="56" id="k7N-zb-Ew5"/>
+                            <constraint firstItem="jMs-62-og4" firstAttribute="top" secondItem="gdo-IF-NzL" secondAttribute="top" id="nMW-pd-3Np"/>
+                            <constraint firstItem="jMs-62-og4" firstAttribute="leading" secondItem="VLe-Uj-HQg" secondAttribute="leading" id="odo-T5-FQI"/>
+                            <constraint firstItem="CKL-Ab-tEK" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="-63" id="q88-O9-hSN"/>
+                            <constraint firstItem="gdo-IF-NzL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="69" id="qXb-UI-k0N"/>
+                            <constraint firstItem="jMs-62-og4" firstAttribute="trailing" secondItem="VLe-Uj-HQg" secondAttribute="trailing" id="ubR-uv-PH9"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0mm-Ps-AiU" appends="YES" id="pfp-Wf-Qkl"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="gdo-IF-NzL" id="JfB-Dl-aU5"/>
+                        <outlet property="imageView" destination="8bx-Bv-dmq" id="Jg4-A5-WuM"/>
+                        <outlet property="largeImageView" destination="CKL-Ab-tEK" id="FHx-uA-FQJ"/>
+                        <outlet property="visualEffectView" destination="cKP-0k-Ptj" id="ath-Kr-NQb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="0mm-Ps-AiU">
+                    <connections>
+                        <action selector="PanAction:" destination="BYZ-38-t0r" id="5VE-q9-fLa"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="562" y="419"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="2.jpeg" width="4474" height="2517"/>
+        <image name="b.jpeg" width="599" height="677"/>
+    </resources>
+</document>
