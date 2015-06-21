@@ -30,8 +30,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let mainDirURL = NSBundle.mainBundle().resourceURL!.URLByAppendingPathComponent("main")
-        let fileKeys = getFileKeys(mainDirURL, keyPrefix: "Emiaostein")
+        let mainDirURL = NSBundle.mainBundle().resourceURL!.URLByAppendingPathComponent("CuriosPreviewDemo")
+        let fileKeys = getFileKeys(mainDirURL, keyPrefix: "Emiaostein1")
         
         upload = UpLoadManager(aFileKeys: fileKeys, aToken: token) { (result, finished) -> Void in
             

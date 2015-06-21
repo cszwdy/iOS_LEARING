@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2004AEB3FEC5996DA41B5B47 /* Pods_QiniuUpload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDBE728C482ADD7060EDBDD /* Pods_QiniuUpload.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		2C0FF8731B36334E00129502 /* main in Resources */ = {isa = PBXBuildFile; fileRef = 2C0FF8721B36334E00129502 /* main */; };
 		2C0FF8751B3666CF00129502 /* UpLoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0FF8741B3666CF00129502 /* UpLoadManager.swift */; };
+		2C0FF8771B367E4900129502 /* CuriosPreviewDemo in Resources */ = {isa = PBXBuildFile; fileRef = 2C0FF8761B367E4900129502 /* CuriosPreviewDemo */; };
 		2C1DF5551B341109005AD2F7 /* UploadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DF5541B341109005AD2F7 /* UploadOperation.swift */; };
 		2C1DF5571B341B08005AD2F7 /* uploadQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DF5561B341B08005AD2F7 /* uploadQueue.swift */; };
 		2C6162921B293B44005B9EA4 /* Qiniu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6162911B293B44005B9EA4 /* Qiniu.framework */; };
@@ -32,8 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2C0FF8721B36334E00129502 /* main */ = {isa = PBXFileReference; lastKnownFileType = folder; path = main; sourceTree = "<group>"; };
 		2C0FF8741B3666CF00129502 /* UpLoadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpLoadManager.swift; sourceTree = "<group>"; };
+		2C0FF8761B367E4900129502 /* CuriosPreviewDemo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CuriosPreviewDemo; sourceTree = "<group>"; };
 		2C1DF5541B341109005AD2F7 /* UploadOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadOperation.swift; sourceTree = "<group>"; };
 		2C1DF5561B341B08005AD2F7 /* uploadQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uploadQueue.swift; sourceTree = "<group>"; };
 		2C6162911B293B44005B9EA4 /* Qiniu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Qiniu.framework; path = "Pods/../build/Debug-iphoneos/Pods-QiniuUpload/Qiniu.framework"; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 		2CA19C5A1B2939EF00534D8C /* QiniuUpload */ = {
 			isa = PBXGroup;
 			children = (
-				2C0FF8721B36334E00129502 /* main */,
+				2C0FF8761B367E4900129502 /* CuriosPreviewDemo */,
 				2CA19C5D1B2939EF00534D8C /* AppDelegate.swift */,
 				2C1DF5561B341B08005AD2F7 /* uploadQueue.swift */,
 				2C1DF5541B341109005AD2F7 /* UploadOperation.swift */,
@@ -237,7 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CA19C631B2939F000534D8C /* Main.storyboard in Resources */,
-				2C0FF8731B36334E00129502 /* main in Resources */,
+				2C0FF8771B367E4900129502 /* CuriosPreviewDemo in Resources */,
 				2CA19C681B2939F000534D8C /* LaunchScreen.xib in Resources */,
 				2CA19C651B2939F000534D8C /* Images.xcassets in Resources */,
 			);
