@@ -12,50 +12,44 @@ import Qiniu
 
 
 class ViewController: UIViewController {
+    
+    var count = 0
+    
+    var canceled = false
+    
+    var results = [String : Bool]()
 
     let uploadMananger = QNUploadManager.sharedInstanceWithConfiguration(nil)
     
     let operationQueue = NSOperationQueue()
     
+    var upload: UpLoadManager!
+    
+    let token = "zXqNlKjpzQpFzydm6OCcngSa76aVNp-SwmqG-kUy:32fZPTY9NV3M7sk5c64DuU7ViZI=:eyJzY29wZSI6ImN1cmlvc3B1Ymxpc2giLCJkZWFkbGluZSI6MTQzNDg2NjQ2NX0="
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let mainDirURL = NSBundle.mainBundle().resourceURL!.URLByAppendingPathComponent("main")
+        let fileKeys = getFileKeys(mainDirURL, keyPrefix: "Emiaostein")
         
-        var ar = [UploadOperation]()
-        for index in 0...100 {
+        upload = UpLoadManager(aFileKeys: fileKeys, aToken: token) { (result, finished) -> Void in
             
-            let uploadOperation = UploadOperation(aToken: "\(index)", aKey: "EMiaostain-Key")
-//            uploadOperation.completionBlock = { println("hahahaha" + "\(index)") }
-            ar.append(uploadOperation)
+            println(result)
         }
         
-        NSBlockOperation
+        upload.start()
         
-        self.addObserver(self, forKeyPath: "operationQueue.operationCount", options: NSKeyValueObservingOptions.New, context: nil)
-        operationQueue.maxConcurrentOperationCount = 1
-        operationQueue.addOperations(ar, waitUntilFinished: false)
 
     }
     
-    override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
-
-        if let count = change[NSKeyValueChangeNewKey] as? Int {
-            if count == 0 {
-                println("完成")
-            }
-        } else {
-            
-        }
-    }
-    
-
-    
-    func getUploadResourceList() -> [String : String] {
+    func getFileKeys(rootURL: NSURL, keyPrefix: String) -> [String : String] {
         
         let fileManger = NSFileManager.defaultManager()
-        let mainDirURL = NSBundle.mainBundle().resourceURL?.URLByAppendingPathComponent("main")
+        
         
         var error = NSErrorPointer()
-        let mainDirEntries = fileManger.enumeratorAtURL(mainDirURL!, includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions.SkipsPackageDescendants | NSDirectoryEnumerationOptions.SkipsHiddenFiles) { (url, error) -> Bool in
+        let mainDirEntries = fileManger.enumeratorAtURL(rootURL, includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions.SkipsPackageDescendants | NSDirectoryEnumerationOptions.SkipsHiddenFiles) { (url, error) -> Bool in
             println(url.lastPathComponent)
             return true
         }
@@ -77,28 +71,57 @@ class ViewController: UIViewController {
                         break
                     }
                 }
-                
-                dics[relative] = url.path!
+                let key = keyPrefix + relative
+                dics[key] = url.path!
             }
         }
         return dics
     }
     
-    func uploadTest() {
+//    func uploadTest() {
+//        
+//        let dics = getUploadResourceList()
+//        
+//        let defaultOptions = QNUploadOption.defaultOptions()
+//        let cancelSignal = { () -> Bool in
+//            
+//            return self.canceled
+//        }
+//        
+//        let customOptions = QNUploadOption(mime: defaultOptions.mimeType, progressHandler: { (key, progress) -> Void in
+//            
+////            println("\(key) = \(progress)")
+//            
+//            }, params: defaultOptions.params, checkCrc: defaultOptions.checkCrc, cancellationSignal: cancelSignal)
+//        
+//        let token = "zXqNlKjpzQpFzydm6OCcngSa76aVNp-SwmqG-kUy:OVpEiAgMEs8PUgMxIsZNcfjsPHs=:eyJzY29wZSI6ImN1cmlvc3B1Ymxpc2giLCJkZWFkbGluZSI6MTQzNDg0NjQzMH0="
+//        
+//        let totalCount = dics.count
+//        for (relativePath, filePath) in dics {
+//            
+//            let aKey = "Emiaostein" + relativePath
+//            results[aKey] = false
+//            
+//        uploadMananger.putFile(filePath, key: aKey, token: token, complete: { (ResponseInfo, key, response) -> Void in
+//            
+//            if response != nil {
+//                
+//                self.results[key] = true
+//                
+//            } else {
+//                
+//                self.canceled = false
+//            }
+//            
+//        }, option: customOptions)
+//            
+//        }
+//    }
+
+
+    @IBAction func stopAction(sender: UIButton) {
         
-        let dics = getUploadResourceList()
-        
-        let token = "zXqNlKjpzQpFzydm6OCcngSa76aVNp-SwmqG-kUy:s6wUmG-4lx0zKScKGMTMZnKWWeA=:eyJzY29wZSI6ImN1cmlvc3B1Ymxpc2giLCJkZWFkbGluZSI6MTQzNDcwMjQxMH0="
-        for (relativePath, filePath) in dics {
-            
-        uploadMananger.putFile(filePath, key: token + relativePath, token: token, complete: { (ResponseInfo, key, response) -> Void in
-            
-            println(response)
-        }, option: nil)
-            
-        }
+        upload.cancel()
     }
-
-
 }
 
