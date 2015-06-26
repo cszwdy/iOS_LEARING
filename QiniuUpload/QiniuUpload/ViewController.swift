@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     
     var upload: UpLoadManager!
     
-    let token = "zXqNlKjpzQpFzydm6OCcngSa76aVNp-SwmqG-kUy:32fZPTY9NV3M7sk5c64DuU7ViZI=:eyJzY29wZSI6ImN1cmlvc3B1Ymxpc2giLCJkZWFkbGluZSI6MTQzNDg2NjQ2NX0="
+    let token = "zXqNlKjpzQpFzydm6OCcngSa76aVNp-SwmqG-kUy:SsX0ApPe-2VPzeU9WcvVyBQfw_s=:eyJzY29wZSI6ImN1cmlvc3B1Ymxpc2giLCJkZWFkbGluZSI6MTQzNTAzMTc2OH0="
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +39,6 @@ class ViewController: UIViewController {
         }
         
         upload.start()
-        
-
     }
     
     func getFileKeys(rootURL: NSURL, keyPrefix: String) -> [String : String] {
@@ -77,47 +75,6 @@ class ViewController: UIViewController {
         }
         return dics
     }
-    
-//    func uploadTest() {
-//        
-//        let dics = getUploadResourceList()
-//        
-//        let defaultOptions = QNUploadOption.defaultOptions()
-//        let cancelSignal = { () -> Bool in
-//            
-//            return self.canceled
-//        }
-//        
-//        let customOptions = QNUploadOption(mime: defaultOptions.mimeType, progressHandler: { (key, progress) -> Void in
-//            
-////            println("\(key) = \(progress)")
-//            
-//            }, params: defaultOptions.params, checkCrc: defaultOptions.checkCrc, cancellationSignal: cancelSignal)
-//        
-//        let token = "zXqNlKjpzQpFzydm6OCcngSa76aVNp-SwmqG-kUy:OVpEiAgMEs8PUgMxIsZNcfjsPHs=:eyJzY29wZSI6ImN1cmlvc3B1Ymxpc2giLCJkZWFkbGluZSI6MTQzNDg0NjQzMH0="
-//        
-//        let totalCount = dics.count
-//        for (relativePath, filePath) in dics {
-//            
-//            let aKey = "Emiaostein" + relativePath
-//            results[aKey] = false
-//            
-//        uploadMananger.putFile(filePath, key: aKey, token: token, complete: { (ResponseInfo, key, response) -> Void in
-//            
-//            if response != nil {
-//                
-//                self.results[key] = true
-//                
-//            } else {
-//                
-//                self.canceled = false
-//            }
-//            
-//        }, option: customOptions)
-//            
-//        }
-//    }
-
 
     @IBAction func stopAction(sender: UIButton) {
         

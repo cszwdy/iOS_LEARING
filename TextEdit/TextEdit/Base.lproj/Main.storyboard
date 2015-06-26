@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="15A204h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TextEdit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r6V-AO-Qg8">
+                                <rect key="frame" x="180" y="72" width="240" height="36"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="What can i Do for you">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bLY-Us-qAP">
+                                <rect key="frame" x="192" y="397" width="216" height="173"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cE4-fz-89b">
+                                        <rect key="frame" x="28" y="0.0" width="161" height="29"/>
+                                        <animations/>
+                                        <segments>
+                                            <segment title="White"/>
+                                            <segment title="Red"/>
+                                            <segment title="Yellow"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="ColorDidChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="HE3-3c-Gqj"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gSv-Ww-Ked">
+                                        <rect key="frame" x="49" y="48" width="119" height="29"/>
+                                        <animations/>
+                                        <segments>
+                                            <segment title="Digital"/>
+                                            <segment title="System"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="fontDidChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Qg2-BR-YxN"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" minimumValue="12" maximumValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="gVQ-dx-A5z">
+                                        <rect key="frame" x="61" y="96" width="94" height="29"/>
+                                        <animations/>
+                                        <connections>
+                                            <action selector="fontsizeDidChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="2J2-Rg-uMd"/>
+                                        </connections>
+                                    </stepper>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="icu-Ys-z4S">
+                                        <rect key="frame" x="0.0" y="145" width="216" height="29"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="216" id="fiz-6H-mPy"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Left"/>
+                                            <segment title="Center"/>
+                                            <segment title="Right"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segementDidChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="c4i-lL-S8M"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="bLY-Us-qAP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Ad-db-iLW"/>
+                            <constraint firstItem="r6V-AO-Qg8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="52" id="CA2-qK-enO"/>
+                            <constraint firstItem="r6V-AO-Qg8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ts2-ZI-6RQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bLY-Us-qAP" secondAttribute="bottom" constant="30" id="b6N-GO-fdx"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="o0k-2Z-Ce3" appends="YES" id="PYc-bo-Qea"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="fontDidChanged" destination="gSv-Ww-Ked" id="men-Do-MJW"/>
+                        <outlet property="pinchAction" destination="o0k-2Z-Ce3" id="aPN-bO-Yin"/>
+                        <outlet property="textView" destination="r6V-AO-Qg8" id="y1q-zx-WBj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="o0k-2Z-Ce3">
+                    <pressTypeMask key="allowedPressTypes"/>
+                    <connections>
+                        <action selector="pinchAction:" destination="BYZ-38-t0r" id="BCh-9f-JZT"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="616" y="271"/>
+        </scene>
+    </scenes>
+</document>
