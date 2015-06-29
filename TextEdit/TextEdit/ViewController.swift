@@ -15,24 +15,17 @@ class ViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        print(textView.font?.fontName)
         
-        UIFont.familyNames()
+        FontsManager.share.registerLocalFonts()
         
-        textView.font = UIFont(name: "DS-Digital", size: 30)
+        textView.font = UIFont(name: FontsManager.share.getFontsList()[0], size: 20)
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-//    func textViewDidChange(textView: UITextView) {
-//        
-//        let width = textView.bounds.width
-//        let size = textView.sizeThatFits(CGSize(width: width, height: CGFloat.max))
-//        textView.bounds.size = size
-//    }
 
     @IBAction func ColorDidChanged(sender: UISegmentedControl) {
         
@@ -74,6 +67,13 @@ class ViewController: UIViewController, UITextViewDelegate {
         }
         
     }
+    
+    
+    @IBAction func fontNameChanged(sender: UISegmentedControl) {
+        
+        textView.font = UIFont(name: FontsManager.share.getFontsList()[sender.selectedSegmentIndex], size: textView.font!.pointSize)
+    }
+    
     @IBAction func fontDidChanged(sender: UISegmentedControl) {
         
         guard let fontSize = textView.font?.pointSize else {

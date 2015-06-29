@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="15A204h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="15A178w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
     </dependencies>
@@ -32,7 +32,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bLY-Us-qAP">
-                                <rect key="frame" x="192" y="397" width="216" height="173"/>
+                                <rect key="frame" x="192" y="407" width="216" height="173"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cE4-fz-89b">
                                         <rect key="frame" x="28" y="0.0" width="161" height="29"/>
@@ -46,18 +46,19 @@
                                             <action selector="ColorDidChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="HE3-3c-Gqj"/>
                                         </connections>
                                     </segmentedControl>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gSv-Ww-Ked">
-                                        <rect key="frame" x="49" y="48" width="119" height="29"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="s6N-qc-gjj">
+                                        <rect key="frame" x="37" y="48" width="143" height="29"/>
                                         <animations/>
                                         <segments>
-                                            <segment title="Digital"/>
-                                            <segment title="System"/>
+                                            <segment title="font1"/>
+                                            <segment title="font2"/>
+                                            <segment title="font3"/>
                                         </segments>
                                         <connections>
-                                            <action selector="fontDidChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Qg2-BR-YxN"/>
+                                            <action selector="fontNameChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="BpL-AO-IBm"/>
                                         </connections>
                                     </segmentedControl>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" minimumValue="12" maximumValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="gVQ-dx-A5z">
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minimumValue="20" maximumValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="gVQ-dx-A5z">
                                         <rect key="frame" x="61" y="96" width="94" height="29"/>
                                         <animations/>
                                         <connections>
@@ -90,14 +91,13 @@
                             <constraint firstItem="bLY-Us-qAP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Ad-db-iLW"/>
                             <constraint firstItem="r6V-AO-Qg8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="52" id="CA2-qK-enO"/>
                             <constraint firstItem="r6V-AO-Qg8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ts2-ZI-6RQ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bLY-Us-qAP" secondAttribute="bottom" constant="30" id="b6N-GO-fdx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bLY-Us-qAP" secondAttribute="bottom" constant="20" id="b6N-GO-fdx"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="o0k-2Z-Ce3" appends="YES" id="PYc-bo-Qea"/>
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="fontDidChanged" destination="gSv-Ww-Ked" id="men-Do-MJW"/>
                         <outlet property="pinchAction" destination="o0k-2Z-Ce3" id="aPN-bO-Yin"/>
                         <outlet property="textView" destination="r6V-AO-Qg8" id="y1q-zx-WBj"/>
                     </connections>
